@@ -1,0 +1,5 @@
+/* Content Card is an authoring-only container; it must never occupy layout space. */
+.content-card,
+.content-card.block {
+  display: none !important;
+}
