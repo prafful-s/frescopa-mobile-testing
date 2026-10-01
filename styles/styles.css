@@ -520,9 +520,9 @@ main .section[data-section-status="loaded"] > .default-content-wrapper {
   min-height: 0;
 }
 
-/* Decisioning Container is a blank container: keep it hidden before and after load. */
-.decisioning-container,
-.decisioning-container.block {
+.content-card:not(.author-placeholder),
+.decisioning-container:not(.author-placeholder),
+.inbox:not(.author-placeholder) {
   display: none !important;
 }
 
