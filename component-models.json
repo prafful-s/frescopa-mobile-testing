@@ -1519,6 +1519,77 @@
     ]
   },
   {
+    "id": "inbox",
+    "fields": [
+      {
+        "component": "text",
+        "name": "nickname",
+        "label": "Nickname",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "surface",
+        "label": "Surface",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "borderRadius",
+        "label": "Border Radius (px)",
+        "valueType": "number",
+        "value": 9,
+        "description": "Corner radius of the card in pixels"
+      },
+      {
+        "component": "text",
+        "name": "textColor",
+        "label": "Text color",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "backgroundColor",
+        "label": "Background color",
+        "valueType": "string",
+        "value": "white"
+      },
+      {
+        "component": "text",
+        "name": "borderColor",
+        "label": "Border color",
+        "valueType": "string",
+        "value": "lightgrey"
+      },
+      {
+        "component": "text",
+        "name": "buttonTextColor",
+        "label": "Button Text color",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "buttonBackgroundColor",
+        "label": "Button background color",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "buttonBorderColor",
+        "label": "Button border color",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "customStyles",
+        "label": "Custom Styles",
+        "valueType": "string",
+        "multi": true,
+        "description": "Custom styles for the inbox"
+      }
+    ]
+  },
+  {
     "id": "content-card",
     "fields": [
       {
