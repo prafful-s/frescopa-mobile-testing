@@ -1522,6 +1522,22 @@
     "id": "decisioning-container",
     "fields": [
       {
+        "component": "select",
+        "name": "mobileDecisioningType",
+        "label": "Decisioning Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Experience",
+            "value": "experience"
+          },
+          {
+            "name": "Offer",
+            "value": "offer"
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "mobileNickname",
         "label": "Nickname",
@@ -1534,13 +1550,13 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "mobileFallbackImage",
         "label": "Fallback Image",
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "mobileLinkTo",
         "label": "Link To",
         "valueType": "string"
@@ -1694,22 +1710,6 @@
         "label": "Custom Styles",
         "valueType": "string",
         "multi": true
-      },
-      {
-        "component": "select",
-        "name": "mobileDecisioningType",
-        "label": "Decisioning Type",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Experience",
-            "value": "experience"
-          },
-          {
-            "name": "Offer",
-            "value": "offer"
-          }
-        ]
       }
     ]
   },
