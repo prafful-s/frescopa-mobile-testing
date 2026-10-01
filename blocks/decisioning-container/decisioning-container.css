@@ -15,3 +15,8 @@
   line-height: 1.5;
   overflow-wrap: anywhere;
 }
+
+body:has(main .decisioning-container.author-placeholder) header,
+body:has(main .decisioning-container.author-placeholder) header .nav-wrapper {
+  position: static;
+}
