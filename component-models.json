@@ -874,7 +874,7 @@
         "name": "mobilecardstyle",
         "label": "Card Type",
         "valueType": "string",
-        "value": "stacked",
+        "value": "overlay",
         "options": [
           {
             "name": "Image and text in one line",
