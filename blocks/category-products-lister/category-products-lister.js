@@ -324,6 +324,8 @@ export default async function decorate(block) {
   // Check if we're in author environment
   const isAuthor = isAuthorEnvironment();
   const cfg = readBlockConfig(block) || {};
+  const rawLimit = Number(coerceConfigScalar(cfg.limit));
+  const limit = Number.isFinite(rawLimit) ? Math.max(0, Math.floor(rawLimit)) : 0;
 
   const rawRedirectUrl = cfg?.["redirect-url"] || cfg?.redirecturl || cfg?.redirectUrl;
   const redirectUrl = normalizeRedirectUrl(rawRedirectUrl);
@@ -384,7 +386,7 @@ export default async function decorate(block) {
 
   const allItems = await fetchProducts(folderHref);
   const categoryItems = filterByCategories(allItems, tags);
-  let items = categoryItems;
+  const items = limit > 0 ? categoryItems.slice(0, limit) : categoryItems;
 
   if (styleVariant === "carousel") {
     if (!items || items.length === 0) {

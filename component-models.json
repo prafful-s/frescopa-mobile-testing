@@ -9766,6 +9766,15 @@
         "name": "basic"
       },
       {
+        "component": "number",
+        "name": "limit",
+        "label": "Product Limit",
+        "valueType": "number",
+        "value": 0,
+        "min": 0,
+        "description": "Maximum number of products to display. Set to 0 to show all products."
+      },
+      {
         "component": "aem-content",
         "name": "folder",
         "label": "Products Folder (Content Fragments)",
