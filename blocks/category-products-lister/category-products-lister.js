@@ -217,25 +217,6 @@ function readCardsPerRow(cfg, block) {
   return Math.min(6, Math.max(1, n));
 }
 
-function renderHeader(container, selectedTags) {
-  if (!selectedTags || selectedTags.length === 0) return;
-  const wrap = document.createElement("div");
-  wrap.className = "cpl-tags";
-  const list = Array.isArray(selectedTags)
-    ? selectedTags
-    : `${selectedTags}`.split(",");
-  list
-    .map((t) => `${t}`.trim())
-    .filter(Boolean)
-    .forEach((tag) => {
-      const chip = document.createElement("span");
-      chip.className = "cpl-tag";
-      chip.textContent = tag;
-      wrap.append(chip);
-    });
-  container.append(wrap);
-}
-
 function renderCarousel(block, items, cfg, isAuthor, redirectUrl = "") {
   const heading = coerceConfigScalar(cfg?.["heading"] || cfg?.["block-title"]);
   const learnMoreLabel = coerceConfigScalar(cfg?.["learn-more-label"]) || "Learn more";
@@ -399,8 +380,6 @@ export default async function decorate(block) {
     renderCarousel(block, items, cfg, isAuthor, redirectUrl);
     return;
   }
-
-  renderHeader(block, tags);
 
   const grid = document.createElement("div");
   grid.className = "cpl-grid";
