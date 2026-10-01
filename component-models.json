@@ -9759,12 +9759,71 @@
         ]
       },
       {
+        "component": "select",
+        "name": "mobileimagestyle",
+        "label": "Image Resize Mode",
+        "valueType": "string",
+        "value": "contain",
+        "options": [
+          {
+            "name": "Contain",
+            "value": "contain"
+          },
+          {
+            "name": "Cover",
+            "value": "cover"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "mobileitemrenderer",
+        "label": "Item variant",
+        "valueType": "string",
+        "value": "image-text-one-line",
+        "description": "Image and text in one line works only with Vertical/Grid layout",
+        "options": [
+          {
+            "name": "Image and text in one line",
+            "value": "image-text-one-line"
+          },
+          {
+            "name": "Image and text overlay",
+            "value": "overlay"
+          },
+          {
+            "name": "Image and text below",
+            "value": "stacked"
+          },
+          {
+            "name": "Single Image",
+            "value": "image"
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "mobileitemsinrow",
         "label": "Items in row",
         "value": "",
         "valueType": "number",
         "description": "Number of items per row (1-12). Applies only when Layout is Vertical/Grid"
+      },
+      {
+        "component": "text",
+        "name": "mobileimagewidth",
+        "label": "Image width",
+        "value": "",
+        "valueType": "number",
+        "description": "Image width on mobile, in pixels. Leave empty for the default"
+      },
+      {
+        "component": "text",
+        "name": "mobileitemheight",
+        "label": "Item height",
+        "value": "",
+        "valueType": "number",
+        "description": "Item height on mobile, in pixels. Leave empty for the default"
       },
       {
         "component": "select",
@@ -9786,6 +9845,14 @@
             "value": "none"
           }
         ]
+      },
+      {
+        "component": "text",
+        "name": "mobilecategoryfilter",
+        "label": "Category filter",
+        "value": "",
+        "valueType": "string",
+        "description": "Categories to show, comma-separated (e.g. Electric or Hybrid, Fuel). Leave empty to use the categories of the products in the folder"
       },
       {
         "component": "text",

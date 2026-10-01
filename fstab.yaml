@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p35437-e2207568.adobeaemcloud.com/bin/franklin.delivery/prafful-s/frescopa-mobile-testing/main"
+    url: "https://author-p35437-e2207568.adobeaemcloud.com/bin/franklin.delivery/svfranklindemo/migration-parent-repo/main"
     type: "markup"
     suffix: ".html"

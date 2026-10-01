@@ -1,15 +1,15 @@
 {
   "mappings": [
-    "/content/frescopa/language-masters/en:/",
-    "/content/frescopa/language-masters/en/:/en/",
-    "/content/frescopa/configuration:/.helix/config.json",
-    "/content/frescopa/metadata:/metadata.json",
-    "/content/frescopa/redirects:/redirects.json",
-    "/content/frescopa/graphql:/graphql.json",
-    "/content/frescopa/placeholders:/placeholders.json"
+    "/content/carvelo/language-masters/en:/",
+    "/content/carvelo/language-masters/en/:/en/",
+    "/content/carvelo/configuration:/.helix/config.json",
+    "/content/carvelo/metadata:/metadata.json",
+    "/content/carvelo/redirects:/redirects.json",
+    "/content/carvelo/graphql:/graphql.json",
+    "/content/carvelo/placeholders:/placeholders.json"
   ],
   "includes": [
-    "/content/frescopa/",
-    "/content/dam/frescopa/"
+    "/content/carvelo/",
+    "/content/dam/carvelo/"
   ]
 }
