@@ -31,7 +31,7 @@ const VARIANTS = {
   },
   service: {
     formTitle: 'Customer service',
-    submitLabel: 'Order service',
+    submitLabel: 'Submit',
     successMessage: 'Thank you! Your service has been ordered. We will confirm your appointment shortly.',
     intro: 'Your coffee machine needs cleaning? Order a service with our partners.',
     showPersonalSection: false,

@@ -282,25 +282,26 @@ main .test-drive .td-slot-picker__col-header em {
 main .test-drive .td-slot-picker__option {
   width: 100%;
   padding: 12px 8px;
-  background: rgba(0, 101, 214, 0.1);
-  border: 1px solid rgba(0, 101, 214, 0.12);
-  border-radius: 8px;
+  background: #fff;
+  border: 2px solid #eaa33a;
+  border-radius: 50px;
+  font-family: var(--body-font-family, system-ui, sans-serif);
   font-size: 0.9375rem;
   font-weight: 500;
-  color: #1a1a1a;
+  color: var(--text-color, #1a1a1a);
   cursor: pointer;
   text-align: center;
   transition: border-color 0.15s, background 0.15s;
 }
 
 main .test-drive .td-slot-picker__option:hover:not(.is-disabled):not(.is-selected) {
-  background: rgba(0, 101, 214, 0.18);
+  background: rgba(234, 163, 58, 0.18);
 }
 
 main .test-drive .td-slot-picker__option.is-selected {
-  color: var(--main-accent-color, #e05a3a);
+  color: #fff;
   border-color: var(--main-accent-color, #e05a3a);
-  background: rgba(224, 90, 58, 0.08);
+  background: var(--main-accent-color, #e05a3a);
 }
 
 main .test-drive .td-slot-picker__option.is-disabled {
