@@ -991,6 +991,11 @@
     "id": "checkout",
     "fields": [
       {
+        "component": "tab",
+        "label": "Basic",
+        "name": "basic"
+      },
+      {
         "component": "aem-content",
         "valueType": "string",
         "name": "confirmationpath",
@@ -1034,11 +1039,24 @@
         "description": "Space-separated class names to add to the block"
       },
       {
+        "component": "tab",
+        "label": "Mobile Specific",
+        "name": "mobileSpecific"
+      },
+      {
         "component": "text",
         "name": "mobilebuttoneventtype",
         "label": "Mobile Button Event Type",
         "value": "",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "custommobilestyle",
+        "label": "Custom Mobile Style",
+        "valueType": "string[]",
+        "multi": true,
+        "description": "One style per row, as key:value (e.g. width:250, padding:0)"
       }
     ]
   },
@@ -1417,6 +1435,11 @@
     "id": "loan-application-form",
     "fields": [
       {
+        "component": "tab",
+        "label": "Basic",
+        "name": "basic"
+      },
+      {
         "component": "text",
         "name": "form-title",
         "label": "Form Title",
@@ -1491,11 +1514,24 @@
         "description": "Space-separated class names to add to the block"
       },
       {
+        "component": "tab",
+        "label": "Mobile Specific",
+        "name": "mobileSpecific"
+      },
+      {
         "component": "text",
         "name": "mobilebuttoneventtype",
         "label": "Mobile Button Event Type",
         "value": "",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "custommobilestyle",
+        "label": "Custom Mobile Style",
+        "valueType": "string[]",
+        "multi": true,
+        "description": "One style per row, as key:value (e.g. width:250, padding:0)"
       }
     ]
   },
@@ -2299,6 +2335,11 @@
     "id": "join-us",
     "fields": [
       {
+        "component": "tab",
+        "label": "Basic",
+        "name": "basic"
+      },
+      {
         "component": "text",
         "name": "form-title",
         "label": "Form Title",
@@ -2400,11 +2441,24 @@
         "description": "Space-separated class names to add to the block"
       },
       {
+        "component": "tab",
+        "label": "Mobile Specific",
+        "name": "mobileSpecific"
+      },
+      {
         "component": "text",
         "name": "mobilebuttoneventtype",
         "label": "Mobile Button Event Type",
         "value": "",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "custommobilestyle",
+        "label": "Custom Mobile Style",
+        "valueType": "string[]",
+        "multi": true,
+        "description": "One style per row, as key:value (e.g. width:250, padding:0)"
       }
     ]
   },
@@ -3073,6 +3127,115 @@
         "valueType": "boolean"
       },
       {
+        "component": "select",
+        "name": "mobiletitlevariant",
+        "label": "Title Size",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Large",
+            "value": "titleLarge"
+          },
+          {
+            "name": "Medium",
+            "value": "titleMedium"
+          },
+          {
+            "name": "Small",
+            "value": "titleSmall"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "mobilesubtitlevariant",
+        "label": "Subtitle Size",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Large",
+            "value": "titleLarge"
+          },
+          {
+            "name": "Medium",
+            "value": "titleMedium"
+          },
+          {
+            "name": "Small",
+            "value": "titleSmall"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "mobilehorizontalalignment",
+        "label": "Horizontal Alignment",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "mobilecontentalignment",
+        "label": "Content Alignment",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "mobileverticalalignment",
+        "label": "Vertical Alignment",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Top",
+            "value": "top"
+          },
+          {
+            "name": "Middle",
+            "value": "middle"
+          },
+          {
+            "name": "Bottom",
+            "value": "bottom"
+          }
+        ]
+      },
+      {
+        "component": "number",
+        "name": "mobileopacity",
+        "label": "Overlay Opacity",
+        "valueType": "number",
+        "min": 0,
+        "max": 1,
+        "description": "Darkness of the overlay behind the hero text on mobile (0 = none, 1 = solid). Leave empty to follow the Text Overlay switch."
+      },
+      {
         "component": "text",
         "valueType": "string",
         "name": "custommobilestyle",
@@ -3086,6 +3249,11 @@
   {
     "id": "create-account",
     "fields": [
+      {
+        "component": "tab",
+        "label": "Basic",
+        "name": "basic"
+      },
       {
         "component": "select",
         "name": "variant",
@@ -3258,17 +3426,35 @@
         "description": "Alt text for the logo image"
       },
       {
+        "component": "tab",
+        "label": "Mobile Specific",
+        "name": "mobileSpecific"
+      },
+      {
         "component": "text",
         "name": "mobilebuttoneventtype",
         "label": "Mobile Button Event Type",
         "value": "",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "custommobilestyle",
+        "label": "Custom Mobile Style",
+        "valueType": "string[]",
+        "multi": true,
+        "description": "One style per row, as key:value (e.g. width:250, padding:0)"
       }
     ]
   },
   {
     "id": "child-account-application",
     "fields": [
+      {
+        "component": "tab",
+        "label": "Basic",
+        "name": "basic"
+      },
       {
         "component": "aem-content",
         "valueType": "string",
@@ -3313,11 +3499,24 @@
         "description": "Space-separated class names to add to the block"
       },
       {
+        "component": "tab",
+        "label": "Mobile Specific",
+        "name": "mobileSpecific"
+      },
+      {
         "component": "text",
         "name": "mobilebuttoneventtype",
         "label": "Mobile Button Event Type",
         "value": "",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "custommobilestyle",
+        "label": "Custom Mobile Style",
+        "valueType": "string[]",
+        "multi": true,
+        "description": "One style per row, as key:value (e.g. width:250, padding:0)"
       }
     ]
   },
