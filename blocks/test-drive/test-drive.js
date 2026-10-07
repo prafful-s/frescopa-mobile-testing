@@ -44,6 +44,7 @@ const VARIANTS = {
     fullWidthFields: true,
     slotLabel: 'Preferred service time',
     dataLayerGroup: 'service',
+    cssClass: 'test-drive-service',
     dataLayerKey: 'order',
   },
 };
@@ -186,7 +187,7 @@ function buildFormDef(variantDefaults, config) {
   return {
     id: 'test-drive',
     fieldType: 'form',
-    appliedCssClassNames: 'test-drive-form',
+    appliedCssClassNames: variantDefaults.cssClass ? `test-drive-form ${variantDefaults.cssClass}` : 'test-drive-form',
     items: [
       {
         id: 'heading-test-drive',

@@ -11,13 +11,11 @@ main .test-drive {
 /* Form title (h2 inside heading-wrapper) ----------------------------------- */
 main .test-drive .td-form-title h2,
 main .test-drive h2#heading-test-drive {
-  font-weight: 700;
-  color: var(--text-color, #1a1a1a);
-  margin: 0 0 24px;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 32px;
   line-height: 1.15;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
 }
 
 main .test-drive .td-form-title label,
@@ -27,24 +25,14 @@ main .test-drive .heading-wrapper label {
 
 /* Section headings (personal info / vehicle arrival address) --------------- */
 main .test-drive .td-section-heading h2 {
-  font-weight: 400;
-  color: var(--text-color, #1a1a1a);
-  margin: 24px 0 16px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 24px 0 12px;
 }
 
 main .test-drive .td-section-heading label {
   display: none !important;
-}
-
-/* Intro line (service variant) ---------------------------------------------- */
-main .test-drive .td-intro p {
-  margin: 0 0 8px;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--text-color, #1a1a1a);
 }
 
 /* Panel / form layout ------------------------------------------------------ */
@@ -80,12 +68,6 @@ main .test-drive .panel-wrapper > .submit-wrapper,
 main .test-drive .panel-wrapper > .td-slot-picker,
 main .test-drive .panel-wrapper > .td-slot-error,
 main .test-drive .panel-wrapper > .field-wrapper[data-colspan="12"] {
-  grid-column: span 2;
-}
-
-/* The form renderer marks a field's width with a col-N class (data-colspan is never set), so the
-   full-width variants (service) and their intro line span both columns through col-12. */
-main .test-drive .panel-wrapper > .col-12 {
   grid-column: span 2;
 }
 
@@ -282,26 +264,25 @@ main .test-drive .td-slot-picker__col-header em {
 main .test-drive .td-slot-picker__option {
   width: 100%;
   padding: 12px 8px;
-  background: #fff;
-  border: 2px solid #eaa33a;
-  border-radius: 50px;
-  font-family: var(--body-font-family, system-ui, sans-serif);
+  background: rgba(0, 101, 214, 0.1);
+  border: 1px solid rgba(0, 101, 214, 0.12);
+  border-radius: 8px;
   font-size: 0.9375rem;
   font-weight: 500;
-  color: var(--text-color, #1a1a1a);
+  color: #1a1a1a;
   cursor: pointer;
   text-align: center;
   transition: border-color 0.15s, background 0.15s;
 }
 
 main .test-drive .td-slot-picker__option:hover:not(.is-disabled):not(.is-selected) {
-  background: rgba(234, 163, 58, 0.18);
+  background: rgba(0, 101, 214, 0.18);
 }
 
 main .test-drive .td-slot-picker__option.is-selected {
-  color: #fff;
+  color: var(--main-accent-color, #e05a3a);
   border-color: var(--main-accent-color, #e05a3a);
-  background: var(--main-accent-color, #e05a3a);
+  background: rgba(224, 90, 58, 0.08);
 }
 
 main .test-drive .td-slot-picker__option.is-disabled {
@@ -387,10 +368,6 @@ body.carvelo-theme main .test-drive .td-slot-picker__option.is-selected {
     grid-column: span 1;
   }
 
-  main .test-drive .panel-wrapper > .col-12 {
-    grid-column: span 1;
-  }
-
   main .test-drive .td-slot-picker__columns {
     gap: 6px;
   }
@@ -398,5 +375,92 @@ body.carvelo-theme main .test-drive .td-slot-picker__option.is-selected {
   main .test-drive .td-slot-picker__option {
     font-size: 0.8125rem;
     padding: 10px 4px;
+  }
+}
+
+/* ── Service variant (Customer service) ────────────────────────────────────── */
+
+/* Intro line */
+main .test-drive .td-intro p {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color, #1a1a1a);
+}
+
+/* The form renderer marks a field's width with a col-N class, and the shared form.css turns col-12
+   into "span 12" - far more columns than this block's two-column grid has, which spills items into
+   extra implicit columns. These rules out-rank it and place the service form's items by row:
+   everything is full width (the intro, headings and fields all carry col-12). */
+main .test-drive form.test-drive-service .panel-wrapper > .field-wrapper.col-12 {
+  grid-column: 1 / -1;
+}
+
+@media (width < 600px) {
+  main .test-drive form.test-drive-service .panel-wrapper > .field-wrapper[class*="col-"] {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── Frescopa theme ────────────────────────────────────────────────────────── */
+/* Matches the Frescopa subscription form. Scoped to the theme so every other site that picks up
+   this block keeps its existing look. */
+
+/* The fixed site header otherwise covers the form title. */
+body.frescopa-theme main .test-drive {
+  padding: 120px 24px 48px;
+}
+
+body.frescopa-theme main .test-drive .td-form-title h2,
+body.frescopa-theme main .test-drive h2#heading-test-drive {
+  font-weight: 700;
+  color: var(--text-color, #1a1a1a);
+  margin: 0 0 24px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+body.frescopa-theme main .test-drive .td-section-heading h2 {
+  font-weight: 400;
+  color: var(--text-color, #1a1a1a);
+  margin: 24px 0 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.frescopa-theme main .test-drive .submit-wrapper {
+  text-align: center;
+}
+
+/* Slot picker: amber pills like the theme's inputs (the buttons otherwise use the browser font). */
+body.frescopa-theme main .test-drive .td-slot-picker__option {
+  background: #fff;
+  border: 2px solid #eaa33a;
+  border-radius: 50px;
+  font-family: var(--body-font-family, system-ui, sans-serif);
+  color: var(--text-color, #1a1a1a);
+}
+
+body.frescopa-theme main .test-drive .td-slot-picker__option:hover:not(.is-disabled):not(.is-selected) {
+  background: rgba(234, 163, 58, 0.18);
+}
+
+body.frescopa-theme main .test-drive .td-slot-picker__option.is-selected {
+  color: #fff;
+  border-color: var(--main-accent-color, #e05a3a);
+  background: var(--main-accent-color, #e05a3a);
+}
+
+body.frescopa-theme main .test-drive .td-slot-picker__option.is-disabled {
+  background: transparent;
+  border-color: transparent;
+  color: #999;
+}
+
+@media (width < 600px) {
+  body.frescopa-theme main .test-drive {
+    padding: 96px 16px 32px;
   }
 }
