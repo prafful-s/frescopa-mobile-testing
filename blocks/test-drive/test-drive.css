@@ -11,11 +11,13 @@ main .test-drive {
 /* Form title (h2 inside heading-wrapper) ----------------------------------- */
 main .test-drive .td-form-title h2,
 main .test-drive h2#heading-test-drive {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 800;
-  color: #1a1a1a;
-  margin: 0 0 32px;
+  font-weight: 700;
+  color: var(--text-color, #1a1a1a);
+  margin: 0 0 24px;
   line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 main .test-drive .td-form-title label,
@@ -25,10 +27,12 @@ main .test-drive .heading-wrapper label {
 
 /* Section headings (personal info / vehicle arrival address) --------------- */
 main .test-drive .td-section-heading h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin: 24px 0 12px;
+  font-weight: 400;
+  color: var(--text-color, #1a1a1a);
+  margin: 24px 0 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 main .test-drive .td-section-heading label {
@@ -40,7 +44,7 @@ main .test-drive .td-intro p {
   margin: 0 0 8px;
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--main-accent-color, #e05a3a);
+  color: var(--text-color, #1a1a1a);
 }
 
 /* Panel / form layout ------------------------------------------------------ */
@@ -76,6 +80,12 @@ main .test-drive .panel-wrapper > .submit-wrapper,
 main .test-drive .panel-wrapper > .td-slot-picker,
 main .test-drive .panel-wrapper > .td-slot-error,
 main .test-drive .panel-wrapper > .field-wrapper[data-colspan="12"] {
+  grid-column: span 2;
+}
+
+/* The form renderer marks a field's width with a col-N class (data-colspan is never set), so the
+   full-width variants (service) and their intro line span both columns through col-12. */
+main .test-drive .panel-wrapper > .col-12 {
   grid-column: span 2;
 }
 
@@ -373,6 +383,10 @@ body.carvelo-theme main .test-drive .td-slot-picker__option.is-selected {
   main .test-drive .panel-wrapper > .button-wrapper,
   main .test-drive .panel-wrapper > .submit-wrapper,
   main .test-drive .panel-wrapper > .field-wrapper[data-colspan="12"] {
+    grid-column: span 1;
+  }
+
+  main .test-drive .panel-wrapper > .col-12 {
     grid-column: span 1;
   }
 
