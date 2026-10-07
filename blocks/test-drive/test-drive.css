@@ -35,6 +35,14 @@ main .test-drive .td-section-heading label {
   display: none !important;
 }
 
+/* Intro line (service variant) ---------------------------------------------- */
+main .test-drive .td-intro p {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--main-accent-color, #e05a3a);
+}
+
 /* Panel / form layout ------------------------------------------------------ */
 main .test-drive .test-drive-form {
   --form-columns: 12;
