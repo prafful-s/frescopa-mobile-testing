@@ -108,11 +108,14 @@ function buildFormDef(variantDefaults, config) {
 
   const fieldColspan = variantDefaults.fullWidthFields ? 12 : 6;
 
-  const introFields = variantDefaults.formDescription ? [
+  const formDescription = String(config.formdescription ?? config['form-description'] ?? '').trim()
+    || variantDefaults.formDescription;
+
+  const introFields = formDescription ? [
     {
       id: 'service-intro',
       fieldType: 'plain-text',
-      value: variantDefaults.formDescription,
+      value: formDescription,
       appliedCssClassNames: 'col-12 td-intro',
     },
   ] : [];
