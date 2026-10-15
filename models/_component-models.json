@@ -1113,6 +1113,23 @@
         "label": "Mobile Button Event Type",
         "value": "",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "mobilemessage",
+        "label": "Message",
+        "value": "",
+        "valueType": "string",
+        "description": "Message shown on the mobile app after the button's event runs"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "custommobilestyle",
+        "label": "Custom Mobile Style",
+        "value": "",
+        "multi": true,
+        "description": "Custom styles for the button on mobile"
       }
     ]
   },
