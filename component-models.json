@@ -1148,7 +1148,7 @@
         "label": "Custom Mobile Style",
         "valueType": "string[]",
         "multi": true,
-        "description": "One style per row, as key:value (e.g. width:250, padding:0)"
+        "description": "One style per row, as key:value (e.g. checkbox-width:250 sets the width of the checkbox rows)"
       }
     ]
   },
@@ -1623,7 +1623,7 @@
         "label": "Custom Mobile Style",
         "valueType": "string[]",
         "multi": true,
-        "description": "One style per row, as key:value (e.g. width:250, padding:0)"
+        "description": "One style per row, as key:value (e.g. checkbox-width:250 sets the width of the checkbox rows)"
       }
     ]
   },
@@ -2667,7 +2667,7 @@
         "label": "Custom Mobile Style",
         "valueType": "string[]",
         "multi": true,
-        "description": "One style per row, as key:value (e.g. width:250, padding:0)"
+        "description": "One style per row, as key:value (e.g. checkbox-width:250 sets the width of the checkbox rows)"
       }
     ]
   },
@@ -3613,7 +3613,7 @@
         "label": "Custom Mobile Style",
         "valueType": "string[]",
         "multi": true,
-        "description": "One style per row, as key:value (e.g. width:250, padding:0)"
+        "description": "One style per row, as key:value (e.g. checkbox-width:250 sets the width of the checkbox rows)"
       }
     ]
   },
@@ -3686,7 +3686,7 @@
         "label": "Custom Mobile Style",
         "valueType": "string[]",
         "multi": true,
-        "description": "One style per row, as key:value (e.g. width:250, padding:0)"
+        "description": "One style per row, as key:value (e.g. checkbox-width:250 sets the width of the checkbox rows)"
       }
     ]
   },
