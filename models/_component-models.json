@@ -1101,7 +1101,7 @@
       },
       {
         "component": "text",
-        "name": "mobileicon",
+        "name": "mobilebuttonicon",
         "label": "Icon",
         "value": "",
         "valueType": "string",
