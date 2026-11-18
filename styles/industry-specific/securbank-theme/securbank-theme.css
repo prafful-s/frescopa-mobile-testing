@@ -124,3 +124,9 @@ body.securbank-theme main :is(ul, menu) ul {
 .securbank-theme .hero-wrapper .button-container.cta-button a.button::after{
     display: none;
 }
+
+/* No animated underline on the header links of this site. */
+body.securbank-theme header nav .nav-sections ul > li > a::before,
+body.securfinancial-theme header nav .nav-sections ul > li > a::before {
+  display: none !important;
+}
